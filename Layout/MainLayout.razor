@@ -1,0 +1,56 @@
+@inherits LayoutComponentBase
+
+<div class="layout">
+    <NavMenu />
+
+    <main class="main-content">
+        @Body
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="brand-icon">V</span>
+                        <span class="brand-name">Vitality Wellness</span>
+                    </div>
+                    <p class="footer-tagline">Your partner in health, fitness, and well-being.</p>
+                    <div class="footer-contact">
+                        <p>123 Wellness Way, Health City</p>
+                        <p>Phone: (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="">Home</a>
+                        <a href="about">About Us</a>
+                        <a href="services">Services</a>
+                        <a href="contact">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <div class="footer-links">
+                        <a href="services">Physical Therapy</a>
+                        <a href="services">Personal Training</a>
+                        <a href="services">Massage Therapy</a>
+                        <a href="services">Yoga Classes</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <div class="footer-hours">
+                        <p>Mon - Fri: 6am - 8pm</p>
+                        <p>Saturday: 8am - 4pm</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; @DateTime.Now.Year Vitality Wellness Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>

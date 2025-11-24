@@ -1,0 +1,32 @@
+<header class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="">
+            <span class="brand-icon">V</span>
+            <span class="brand-text">Vitality</span>
+        </a>
+
+        <button class="navbar-toggle" @onclick="ToggleNavMenu" aria-label="Toggle navigation">
+            <span class="toggle-icon @(collapseNavMenu ? "" : "open")"></span>
+        </button>
+
+        <nav class="navbar-nav @NavMenuCssClass">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink>
+            <NavLink class="nav-link" href="about">About</NavLink>
+            <NavLink class="nav-link" href="services">Services</NavLink>
+            <NavLink class="nav-link" href="contact">Contact</NavLink>
+        </nav>
+
+        <a href="contact" class="btn btn-primary nav-cta">Book Now</a>
+    </div>
+</header>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapsed" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
